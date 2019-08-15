@@ -5,13 +5,19 @@
 
 <div class="row">
     <div class="col-5">
-        <form action="venda/editar" method="post">
+        <form action="/venda/editar" method="post">
             <input type="hidden" name="id" />
             <div class="form-group">
                 <label id="venda-cliente">Cliente</label>
                 <select class="form-control"
                         id="venda-cliente"
-                        name="idCliente"></select>
+                        name="idCliente">
+                    <option
+                        value="@ViewBag.Venda.idCliente"
+                        selected="selected"
+                            >@ViewBag.Venda.Cliente.Nome</option>
+
+                </select>
             </div>
             <div class="form-group">
                 <label for="venda-descricao">Descrição</label>
