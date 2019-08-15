@@ -12,13 +12,16 @@ namespace Model
     public class Produto
     {
         [Key, Column("id")]
-        public string Nome { get; set; }
+        public int Id { get; set; }
 
         [Column("id_venda")]
         public int IdVenda { get; set; }
 
         [ForeignKey("IdVenda")]
         public Venda Venda { get; set; }
+
+        [Column("nome")]
+        public string Nome { get; set; }
 
         [Column("quantidade")]
         public int Quantidade { get; set; }
